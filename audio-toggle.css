@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Sound Feedback Toggle
+   ========================================================================== */
+.audio-toggle-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: rgba(17, 52, 96, 0.88);
+  border: 1px solid var(--color-border-glass);
+  box-shadow: var(--goodly-glow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-lapis-light);
+}
+
+.audio-toggle-btn:hover {
+  border-color: var(--color-gold-radiant);
+  box-shadow: var(--goodly-glow-gold);
+  color: var(--color-gold-radiant);
+}

@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Chat Overlay Layer & Cloud Message Stream
+   ========================================================================== */
+.chat-window {
+  position: relative;
+  z-index: 15;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: transparent;
+  pointer-events: none;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+body.map-full-view .chat-window {
+  opacity: 0;
+  transform: scale(0.97) translateY(15px);
+  pointer-events: none !important;
+}
+
+.room-banner {
+  padding: 10px 22px;
+  background: rgba(10, 28, 54, 0.9);
+  border-bottom: 1px solid var(--color-border-glass);
+  box-shadow: var(--goodly-glow-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.room-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.room-title {
+  font-family: var(--font-serif-celestial);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-cloud-white);
+  text-shadow: var(--goodly-gold-text-glow);
+}
+
+.messages-stream {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  scroll-behavior: smooth;
+  pointer-events: auto;
+  cursor: crosshair;
+}
+
+.cloud-box { cursor: default; }
+
+.message-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 0.76rem;
+}
+
+.message-sender { font-weight: 700; color: #103b6d; }
+.message-sender.verified { color: #9e6b00; display: flex; align-items: center; gap: 4px; }
+.message-time { font-size: 0.68rem; color: rgba(11, 34, 64, 0.68); }
+
+.message-body {
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: #071930;
+  font-weight: 500;
+  word-break: break-word;
+}

@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Live Keystroke Streaming Cloud Puffs & Composer
+   ========================================================================== */
+.live-typing-container {
+  background: rgba(10, 28, 54, 0.9);
+  border-top: 1.5px solid var(--color-border-gold);
+  border-bottom: 1px solid var(--color-border-glass);
+  box-shadow: var(--goodly-glow-soft);
+  padding: 10px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 54px;
+  pointer-events: auto;
+}
+
+.live-typing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  font-family: var(--font-serif-celestial);
+  letter-spacing: 0.08em;
+  color: var(--color-gold-radiant);
+  text-shadow: var(--goodly-gold-text-glow);
+}
+
+.live-typers-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.live-typer-bubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: radial-gradient(circle at 40% 30%, #ffffff 0%, #e3f4ff 100%);
+  border: 2px solid var(--color-gold-radiant);
+  padding: 7px 24px 7px 16px;
+  border-radius: 28px 32px 26px 30px;
+  box-shadow: var(--goodly-glow-gold), 0 0 20px rgba(255, 255, 255, 0.75);
+  animation: typing-halo-pulse 1.6s infinite alternate;
+  max-width: 100%;
+  color: #081b33;
+}
+
+@keyframes typing-halo-pulse {
+  0% { box-shadow: 0 0 12px rgba(255, 224, 51, 0.5), 0 0 20px rgba(255, 255, 255, 0.45); }
+  100% { box-shadow: 0 0 26px rgba(255, 224, 51, 0.95), 0 0 38px rgba(255, 255, 255, 0.85); }
+}
+
+.live-typer-name { font-size: 0.8rem; font-weight: 800; color: #8a5a00; white-space: nowrap; }
+
+.live-keystroke-text {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #071930;
+  background: rgba(43, 136, 223, 0.16);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  max-width: 480px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: 2px solid #c69214;
+}
+
+.live-cursor {
+  display: inline-block;
+  width: 2.5px;
+  height: 14px;
+  background: #d97706;
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.chat-input-bar {
+  padding: 14px 24px;
+  background: rgba(10, 28, 54, 0.94);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--color-border-glass);
+  pointer-events: auto;
+}
+
+.chat-input {
+  flex: 1;
+  background: radial-gradient(circle at 50% 30%, #ffffff 0%, #e8f5ff 100%);
+  border: 2px solid var(--color-gold-radiant);
+  padding: 13px 20px;
+  border-radius: 30px;
+  color: #071930;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: var(--goodly-glow-cloud);
+  text-shadow: none;
+}
+
+.chat-input:focus {
+  border-color: #ffffff;
+  box-shadow: var(--goodly-glow-gold), 0 0 28px rgba(255, 255, 255, 0.9);
+}
