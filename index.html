@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes">
+  <title>TheInternetIsLove.com — Version 7777777 {(/:-7777777-:\)} (Divine Beyond Design)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- 21 Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="css/vars.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/viewport-aspect.css">
+  <link rel="stylesheet" href="css/v6-features.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/history-nav.css">
+  <link rel="stylesheet" href="css/rooms.css">
+  <link rel="stylesheet" href="css/date-directory.css">
+  <link rel="stylesheet" href="css/os-resizable.css">
+  <link rel="stylesheet" href="css/clouds.css">
+  <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="css/live-typing.css">
+  <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="css/groups.css">
+  <link rel="stylesheet" href="css/youtube-hub.css">
+  <link rel="stylesheet" href="css/gemini-governance.css">
+  <link rel="stylesheet" href="css/symbol-codex.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/audio-toggle.css">
+</head>
+<body class="gui-desktop">
+  <!-- Left Pull-Tab & Pull-Out Directory of Chats by Day [ § ] -->
+  <div id="date-pull-tab" class="date-pull-tab" title="CYPHER-01 [ § ] • Pull right or click to open the Directory of Chats by Day">
+    § CHATS BY DAY &gt;&gt;
+  </div>
+  
+  <aside id="date-directory-drawer" class="date-directory-drawer">
+    <div class="date-drawer-header">
+      <span class="date-drawer-title">[§] Directory of Chats by Day</span>
+      <button id="close-date-drawer" class="btn-primary" style="padding:4px 12px; font-size:0.75rem;">[X] Close</button>
+    </div>
+    <div id="date-list-container" class="date-list-container"></div>
+  </aside>
+
+  <div class="app-container">
+    
+    <!-- Top Celestial & Presidential Header with Symbolic Command Dock -->
+    <header class="app-header">
+      <div class="brand-section">
+        <button id="menu-toggle-btn" class="mobile-toggle" style="display:none; font-family:var(--font-mono); font-weight:900; font-size:1.05rem;">[=]</button>
+        <img src="assets/logo.jpg" alt="Divine Beyond Design Crest" class="brand-logo-img">
+        <div class="brand-titles">
+          <span class="brand-name">TheInternetIsLove.com</span>
+          <span class="brand-motto">Divine Beyond Design • Version 7777777 {(/:-7777777-:\)}</span>
+        </div>
+        
+        <div class="history-nav-cluster" title="Temporal History Navigation (Back / Forward)">
+          <button id="btn-history-back" class="history-btn" title="Go Back">&lt;&lt;</button>
+          <button id="btn-history-forward" class="history-btn" title="Go Forward">&gt;&gt;</button>
+          <span id="history-breadcrumb" class="history-breadcrumb">Mass Sanctuary</span>
+        </div>
+      </div>
+      
+      <!-- Presidential Symbolic Command Dock -->
+      <div class="header-controls">
+        <div class="symbolic-command-dock desktop-only-dock" aria-label="Presidential Symbolic Command Dock">
+          <button id="btn-open-riddle-manual" class="symbol-dock-btn riddle-master-btn" data-sym-code="ASCLEPIUS" title="[$] The Rod of Asclepius — Open 'The Riddle of Symbol' Manual (Alt+0)">$</button>
+          <button id="btn-open-credits-modal" class="symbol-dock-btn" data-sym-code="HEPTAD" onclick="window.TII_App.CreditsPage.openModal()" title="[7] Official Credit Page — Michael Elohim Archangel • YouTube.com/@TheChrist • Twitter: @TheChristus • Completed With Gemini By Google" style="color:#ffe033; border-color:#ffe033; font-weight:900;">7</button>
+          <button id="btn-open-hazard-modal" class="symbol-dock-btn" data-sym-code="SENTINEL" onclick="window.TII_App.HazardRadar.openModal()" title="[!] Gemini 24-Hour Local &amp; Global Hazard Radar (Google Search API + Google News API &lt;24h)" style="color:#ff9f1c; border-color:#ff9f1c; font-weight:900;">!</button>
+          <button id="btn-open-features-modal" class="symbol-dock-btn" data-sym-code="TOGGLES" title="[+] Feature Switches &amp; Forever Save State (Pinch/Expand, Translate, Chimes)">[+]</button>
+          <button id="btn-open-btc-modal" class="symbol-dock-btn" data-sym-code="BITCOIN" title="[B] Donate Bitcoin (BTC) to the Creator" style="color:#ffd700; border-color:#ffd700;">B</button>
+          <button id="btn-open-date-directory" class="symbol-dock-btn" data-sym-code="CHRONOS" title="[§] The Double Scroll — Directory of Chats by Day (Alt+1)">§</button>
+          <button id="dock-sym-map" class="symbol-dock-btn" data-sym-code="COMPASS" title="[⊕] Terrestrial Crosshair — Part Clouds for Full Map (Alt+2)">⊕</button>
+          <button id="dock-sym-blast" class="symbol-dock-btn" data-sym-code="SOLARIS" title="[¤] Radiating Beacon — Blast Live Location to Map (Alt+3)">¤</button>
+          <button id="dock-sym-groups" class="symbol-dock-btn" data-sym-code="COVENANT" title="[&amp;] Knot of Fellowship — City &amp; Privacy Location Groups (Alt+4)">&amp;</button>
+          <button id="btn-open-youtube-hub" class="symbol-dock-btn" data-sym-code="LUMIERE" title="[|&gt;] Projection Prism — In-App YouTube Videos &amp; Community Posts (Alt+6)">|&gt;</button>
+          <button id="btn-open-gemini-gov" class="symbol-dock-btn" data-sym-code="APEX" title="[^] Ascending Chevron — Gemini AI Site Upgrade &amp; Community Vote (Alt+7)">^</button>
+          <button id="btn-google-cloud-keys" class="symbol-dock-btn" data-sym-code="CONDUIT" title="[::] Fourfold Socket — Configure Google Cloud API Keys (Alt+9)">::</button>
+          <button id="audio-toggle-btn" class="symbol-dock-btn" data-sym-code="RESONANCE" title="[*] Six-Rayed Chime — Toggle Keystroke Synthesizer">-</button>
+          <select id="header-lang-select" class="lang-select-pill" title="[~] Sine Wave of Tongues — Auto-Translate Target Language">
+            <option value="en">~ EN</option>
+            <option value="es">~ ES</option>
+            <option value="fr">~ FR</option>
+            <option value="ja">~ JA</option>
+            <option value="de">~ DE</option>
+          </select>
+        </div>
+        
+        <!-- Mobile Quick-Access Pills in Header for BTC & Feature Toggles -->
+        <button onclick="window.TII_App.SaveState.openModal()" class="btn-primary" style="padding:4px 9px; font-size:0.68rem; font-family:var(--font-mono);" title="Toggle Features &amp; Save State">[+] Toggles</button>
+        <button onclick="window.TII_App.BitcoinDonate.openModal()" class="btn-gold" style="width:auto; padding:4px 10px; font-size:0.68rem; font-family:var(--font-mono);" title="Donate Bitcoin">[B] BTC</button>
+        
+        <div class="viewport-switch-cluster" title="[%] Dual-Sphere Ratio — Switch Between Desktop GUI (16:9) &amp; Mobile iPhone 16 Pro GUI (9:16)">
+          <button id="vp-btn-16-9" class="vp-btn active">% 16:9 (1:1 Default)</button>
+          <button id="vp-btn-9-16" class="vp-btn">% 9:16</button>
+          <button id="vp-btn-auto" class="vp-btn">% Auto</button>
+        </div>
+        
+        <div id="online-counter-badge" class="online-counter-badge" onclick="window.TII_App.SoulsCounter.openRosterModal()" style="cursor:pointer;" title="Click to open the Live Online Souls Roster &amp; Multi-Domain Directory">
+          <span class="pulse-dot"></span>
+          <span id="online-counter-text">Global: 1 Soul | This Board: 1 | Local: 0 | Groups: 0</span>
+        </div>
+        
+        <div id="user-profile-chip" class="user-profile-chip" title="[#] Login: Country Code + Phone + 7-Digit PIN, Unique @Handle &amp; Biometrics">
+          <span style="font-family:var(--font-mono); font-weight:900; color:var(--color-gold-radiant);">#</span>
+          <div>
+            <div id="header-user-name" style="font-weight:700; font-size:0.78rem; color:#fff;">Guest</div>
+            <div id="header-user-status" style="font-size:0.6rem; color:var(--color-gold-radiant);">@guest</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Main One-Page Body Area -->
+    <div class="app-main">
+      
+      <!-- Executive Sidebar -->
+      <aside id="app-sidebar" class="app-sidebar">
+        <div class="sidebar-header">
+          <span class="sidebar-title">Sanctuary Clouds</span>
+          <button id="btn-create-private" class="btn-primary" style="padding:4px 11px; font-size:0.72rem;">[+] Private</button>
+        </div>
+        
+        <div class="channels-section">
+          <div class="channel-group">
+            <div class="channel-group-title">Universal Sky</div>
+            <div class="channel-list">
+              <div id="nav-channel-mass" class="channel-item active">
+                <div class="channel-info">
+                  <span class="channel-icon" style="font-family:var(--font-mono); font-weight:900; color:var(--color-gold-radiant);">(o)</span>
+                  <span>Mass Global Cloud Chat</span>
+                </div>
+                <span id="mass-chat-badge" class="channel-badge">1 Live</span>
+              </div>
+              <div id="nav-view-map" class="channel-item">
+                <div class="channel-info">
+                  <span class="channel-icon" style="font-family:var(--font-mono); font-weight:900; color:var(--color-gold-radiant);">⊕</span>
+                  <span>Part Clouds (Full Map)</span>
+                </div>
+                <span class="channel-badge">Live</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="channel-group">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <span class="channel-group-title" style="margin-bottom:0;">Built-In City Groups</span>
+              <button id="btn-add-custom-city" style="font-size:0.7rem; color:var(--color-gold-radiant); cursor:pointer;">[+] Add City</button>
+            </div>
+            <div id="city-channels-list" class="channel-list"></div>
+          </div>
+        </div>
+        <div onclick="window.TII_App.CreditsPage.openModal()" style="margin-top:auto; padding:10px 12px; border-top:1px solid var(--color-border-gold); background:rgba(6,17,33,0.92); cursor:pointer; text-align:center;" title="Click to open Official Credit Page [7]">
+          <div style="font-family:var(--font-serif-celestial); font-size:0.74rem; font-weight:800; color:var(--color-gold-radiant);">[7] Michael Elohim Archangel</div>
+          <div style="font-size:0.64rem; color:#eaf4fc; margin-top:2px;">YouTube.com/@TheChrist • @TheChristus</div>
+          <div style="font-size:0.6rem; color:var(--color-gold-radiant); margin-top:2px; font-weight:700;">Completed With Gemini By Google</div>
+        </div>
+      </aside>
+      
+      <!-- Main Stage: Anonymous Default = Whole World Chat + Operable World Map -->
+      <main class="app-stage">
+        
+        <!-- LAYER 1: Operable World & Radar Map -->
+        <div id="map-view-container" class="map-view-container">
+          <div id="google-maps-host" style="position:absolute; inset:0; display:none; z-index:1;"></div>
+          <canvas id="radar-canvas" class="radar-canvas" style="position:relative; z-index:2;"></canvas>
+          
+          <button id="return-clouds-pill" class="return-clouds-pill">
+            (o) Return to Cloud Chat (Show Clouds)
+          </button>
+          
+          <div class="radar-overlay-controls">
+            <div class="radar-panel">
+              <div style="font-family:var(--font-serif-celestial); font-size:0.84rem; color:#fff; font-weight:700;">[⊕] WORLD SITUATION &amp; RADAR MAP</div>
+              <div id="map-bounds-readout" style="font-size:0.7rem; color:var(--color-gold-radiant);">[+] Auto-Framed to Furthest Active Souls</div>
+            </div>
+            
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <button id="btn-map-hazards" onclick="window.TII_App.HazardRadar.openModal()" class="btn-primary" style="font-size:0.72rem; padding:6px 12px; border-color:#ff9f1c; color:#ffd27f;">[!] 24h Hazards (<span id="map-hazard-count">6</span>)</button>
+              <button id="btn-map-fit-bounds" class="btn-primary" style="font-size:0.72rem; padding:6px 12px;">[+] Fit Range</button>
+              <div id="current-group-badge" class="group-status-pill">[~] Global</div>
+              <button id="btn-manage-groups" class="btn-primary" style="font-size:0.72rem; padding:6px 12px;">[&amp;] Groups</button>
+              <div class="map-zoom-controls" style="flex-direction:row;">
+                <button id="btn-map-zoom-in" class="zoom-btn" title="Zoom In">+</button>
+                <button id="btn-map-zoom-out" class="zoom-btn" title="Zoom Out">-</button>
+                <button id="btn-map-reset" class="zoom-btn" title="Reset" style="font-size:0.72rem;">0</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="blast-action-card">
+            <div class="blast-scope-toggle">
+              <button id="scope-btn-public" class="scope-btn active">Public</button>
+              <button id="scope-btn-group" class="scope-btn">Group</button>
+            </div>
+            <button id="btn-blast-location" class="btn-blast">
+              <span>[¤]</span>
+              <span>Blast Location</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- LAYER 2: Luminous Cloud Chat Stream -->
+        <div id="chat-window" class="chat-window">
+          <div class="room-banner">
+            <div class="room-banner-left" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+              <span id="current-room-title" class="room-title">[*] Mass Global Cloud Chat</span>
+              <button id="room-banner-souls-pill" onclick="window.TII_App.SoulsCounter.openRosterModal()" class="btn-primary" style="padding:3px 10px; font-size:0.68rem; font-family:var(--font-mono); border-color:var(--color-gold-radiant); color:var(--color-gold-radiant);" title="Click to inspect every person online in this board, local cities, private groups, and globally">
+                [●] 1 Soul Online in Mass Global Board • 1 Total Online (View Roster)
+              </button>
+            </div>
+            <span class="room-banner-hint" style="font-size:0.72rem; color:var(--color-gold-radiant);">[+] Click [+] Toggles to enable Pinch/Expand &amp; Extras • [⊕] Click sky between clouds for Full Map</span>
+          </div>
+          
+          <div id="messages-stream" class="messages-stream"></div>
+          
+          <div class="live-typing-container">
+            <div class="live-typing-header">
+              <span>[*] LIVE STREAMING KEYSTROKE CLOUDS:</span>
+              <span style="font-size:0.66rem; opacity:0.85;">Real-Time Sync</span>
+            </div>
+            <div id="live-typers-flow" class="live-typers-flow"></div>
+          </div>
+          
+          <div class="chat-input-bar">
+            <input type="text" id="chat-input-field" class="chat-input" placeholder="Write in your cloud... everyone sees your letters live as you type!" autocomplete="off">
+            <button id="btn-send-message" class="btn-primary" style="padding: 12px 22px;">Send [&gt;&gt;]</button>
+          </div>
+        </div>
+        
+      </main>
+      
+    </div>
+    
+    <!-- Dedicated Mobile GUI Bottom Symbolic Thumb-Zone Bar -->
+    <nav class="mobile-bottom-dock" aria-label="Mobile Symbolic Command Bar">
+      <button id="mob-btn-chat" class="mob-dock-btn active">
+        <span class="mob-sym">(o)</span>
+        <span class="mob-lbl">Clouds</span>
+      </button>
+      <button id="mob-btn-map" class="mob-dock-btn">
+        <span class="mob-sym">⊕</span>
+        <span class="mob-lbl">Map</span>
+      </button>
+      <button id="mob-btn-blast" class="mob-dock-btn">
+        <span class="mob-sym">¤</span>
+        <span class="mob-lbl">Blast</span>
+      </button>
+      <button id="mob-btn-rooms" class="mob-dock-btn">
+        <span class="mob-sym">&amp;</span>
+        <span class="mob-lbl">Rooms</span>
+      </button>
+      <button id="mob-btn-media" class="mob-dock-btn">
+        <span class="mob-sym">|&gt;</span>
+        <span class="mob-lbl">Media</span>
+      </button>
+      <button id="mob-btn-btc" class="mob-dock-btn">
+        <span class="mob-sym">B</span>
+        <span class="mob-lbl">Donate</span>
+      </button>
+      <button id="mob-btn-riddle" class="mob-dock-btn">
+        <span class="mob-sym">$</span>
+        <span class="mob-lbl">Riddle</span>
+      </button>
+    </nav>
+    
+    <!-- Military-Grade Tactical Telemetry Footer Strip (Toggled OFF by default) -->
+    <footer class="tactical-telemetry-bar">
+      <div class="telemetry-cluster">
+        <span class="telemetry-kv">CIPHER: <b>AES-256-GCM / PBKDF2-SHA512</b></span>
+        <span class="telemetry-kv">SECTOR: <b id="tel-room">MASS-CHAT</b></span>
+        <span class="telemetry-kv">CHRONOS: <b id="tel-date">ALL</b></span>
+        <span class="telemetry-kv">CIRCLE: <b id="tel-group">PUBLIC</b></span>
+      </div>
+      <div class="telemetry-cluster">
+        <span class="telemetry-kv">GUI: <b id="tel-scale">DESKTOP-GUI (16:9)</b></span>
+        <span class="telemetry-kv">HOTKEYS: <b>ALT+0..9</b></span>
+        <span class="telemetry-kv" style="cursor:pointer; color:var(--color-gold-radiant);" onclick="window.TII_App.SymbolCodex.openManual()">[$] THE RIDDLE OF SYMBOL</span>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- Feature Toggles & Forever Server Save-State Modal [ + ] -->
+  <div id="features-modal-backdrop" class="modal-backdrop">
+    <div class="gov-panel os-resizable" style="max-width:560px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-family:var(--font-serif-celestial); color:var(--color-gold-radiant);">[+] Feature Switches &amp; Forever Save State</h3>
+          <p style="font-size:0.72rem; color:var(--color-lapis-light);">By default on anonymous entry, only World Chat &amp; Map are active. Toggle features below and save your state forever:</p>
+        </div>
+        <button id="close-features-modal" class="btn-primary" style="padding:6px 14px; font-size:0.75rem;">[X] Close</button>
+      </div>
+      
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button id="btn-enable-all-features" class="btn-gold" style="width:auto; padding:7px 14px; font-size:0.74rem;">[*] Enable All Features</button>
+        <button id="btn-disable-all-features" class="btn-primary" style="padding:7px 14px; font-size:0.74rem;">[-] Reset to Anonymous Default (All Off)</button>
+        <button id="btn-save-state-forever" class="btn-primary" style="padding:7px 14px; font-size:0.74rem; border-color:var(--color-gold-radiant);">[#] Save State to Server Forever</button>
+      </div>
+      
+      <div id="feature-toggle-list" class="feature-toggle-list"></div>
+    </div>
+  </div>
+  
+  <!-- Bitcoin (BTC) Donation Sanctuary Modal [ B ] -->
+  <div id="btc-modal-backdrop" class="modal-backdrop">
+    <div class="btc-modal-card os-resizable">
+      <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+        <h3 style="font-family:var(--font-serif-celestial); color:var(--color-gold-radiant); font-size:1.1rem;">[B] Donate Bitcoin (BTC)</h3>
+        <button id="close-btc-modal" class="btn-primary" style="padding:5px 12px; font-size:0.74rem;">[X] Close</button>
+      </div>
+      
+      <p style="font-size:0.78rem; color:var(--color-cloud-soft);">Support the eternal hosting &amp; development of <b>TheInternetIsLove.com</b> (*"Divine Beyond Design"*):</p>
+      
+      <img src="assets/btc_qr.png" alt="Bitcoin Donation QR Code" class="btc-qr-frame">
+      
+      <div style="font-size:0.72rem; color:var(--color-gold-radiant); font-weight:700;">OFFICIAL BITCOIN (BECH32) ADDRESS:</div>
+      <div class="btc-address-box">bc1q47mzsty96vs2qnsjhp0mm3r77f2r2khrt6wn4t</div>
+      
+      <div style="display:flex; gap:10px; width:100%;">
+        <button id="btn-copy-btc-address" class="btn-gold" style="flex:1; padding:10px 14px; font-size:0.8rem;">[Copy BTC Address]</button>
+        <a href="bitcoin:bc1q47mzsty96vs2qnsjhp0mm3r77f2r2khrt6wn4t" class="btn-primary" style="flex:1; padding:10px 14px; font-size:0.8rem; display:flex; align-items:center; justify-content:center;">[Open BTC Wallet]</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Authentication: Country Code + Phone + 7-Digit PIN, Unique @Handle & Biometrics [ # ] -->
+  <div id="auth-modal-backdrop" class="modal-backdrop">
+    <div class="auth-card" style="max-width:460px;">
+      <img src="assets/logo.jpg" alt="Logo" class="auth-emblem" style="width:56px; height:56px;">
+      <h2 class="auth-title">TheInternetIsLove.com</h2>
+      <p class="auth-subtitle">[#] Soul Identity: Display Name, Unique @Handle, 7-PIN &amp; Biometrics</p>
+      
+      <div class="auth-tabs">
+        <button id="tab-guest-btn" class="auth-tab-btn active">Name + @Handle</button>
+        <button id="tab-phone-btn" class="auth-tab-btn">Phone + 7-PIN</button>
+        <button id="tab-bio-btn" class="auth-tab-btn">Biometrics</button>
+      </div>
+      
+      <!-- Panel 1: Temporary Non-Unique Username + Unique @Handle -->
+      <div id="panel-guest">
+        <p style="font-size:0.74rem; margin-bottom:8px; color:var(--color-lapis-light);">Display usernames can be temporary and non-unique, paired with your unique @handle:</p>
+        <input type="text" id="guest-nickname-input" class="input-field" placeholder="Temporary Display Username (non-unique, e.g. Michael)">
+        <input type="text" id="guest-handle-input" class="input-field" placeholder="Unique Handle (must be unique, e.g. @michael_77)">
+        <button id="btn-guest-submit" class="btn-gold" style="margin-top:6px;">Set Display Name &amp; Unique @Handle</button>
+      </div>
+      
+      <!-- Panel 2: Country Code + Phone Number + 7-Digit PIN + Unique @Handle -->
+      <div id="panel-phone" style="display:none;">
+        <div class="phone-country-row">
+          <select id="phone-country-code" class="country-code-select" title="Country Code">
+            <option value="+1">+1 (US/CA)</option>
+            <option value="+44">+44 (UK)</option>
+            <option value="+81">+81 (JP)</option>
+            <option value="+33">+33 (FR)</option>
+            <option value="+49">+49 (DE)</option>
+            <option value="+61">+61 (AU)</option>
+            <option value="+34">+34 (ES)</option>
+            <option value="+39">+39 (IT)</option>
+            <option value="+52">+52 (MX)</option>
+            <option value="+55">+55 (BR)</option>
+            <option value="+91">+91 (IN)</option>
+            <option value="+82">+82 (KR)</option>
+          </select>
+          <input type="tel" id="phone-number-input" class="input-field" placeholder="Phone Number" style="margin-bottom:0; flex:1;">
+        </div>
+        
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="phone-nickname-input" class="input-field" placeholder="Display Name (non-unique)">
+          <input type="text" id="phone-handle-input" class="input-field" placeholder="Unique @handle">
+        </div>
+        
+        <div style="font-size:0.7rem; color:var(--color-gold-radiant);">7-DIGIT PIN PASSWORD:</div>
+        <div class="pin-display-row" style="margin:8px 0;">
+          <div class="pin-digit-slot" id="pin-slot-0"></div>
+          <div class="pin-digit-slot" id="pin-slot-1"></div>
+          <div class="pin-digit-slot" id="pin-slot-2"></div>
+          <div class="pin-digit-slot" id="pin-slot-3"></div>
+          <div class="pin-digit-slot" id="pin-slot-4"></div>
+          <div class="pin-digit-slot" id="pin-slot-5"></div>
+          <div class="pin-digit-slot" id="pin-slot-6"></div>
+        </div>
+        
+        <div class="pin-keypad" style="margin-top:8px;">
+          <button class="keypad-key" data-val="1">1</button>
+          <button class="keypad-key" data-val="2">2</button>
+          <button class="keypad-key" data-val="3">3</button>
+          <button class="keypad-key" data-val="4">4</button>
+          <button class="keypad-key" data-val="5">5</button>
+          <button class="keypad-key" data-val="6">6</button>
+          <button class="keypad-key" data-val="7">7</button>
+          <button class="keypad-key" data-val="8">8</button>
+          <button class="keypad-key" data-val="9">9</button>
+          <button class="keypad-key" data-val="CLEAR" style="font-size:0.85rem;">C</button>
+          <button class="keypad-key" data-val="0">0</button>
+          <button class="keypad-key" data-val="DEL" style="font-size:0.85rem;">&lt;-</button>
+        </div>
+        
+        <button id="btn-phone-submit" class="btn-gold" style="margin-top:12px;">Save Forever &amp; Authenticate</button>
+      </div>
+      
+      <!-- Panel 3: Device Biometric Authentication (Apple Face ID / Samsung Pass / Google Passkeys) -->
+      <div id="panel-bio" style="display:none; text-align:left;">
+        <p style="font-size:0.76rem; color:var(--color-cloud-soft); line-height:1.45; margin-bottom:10px;">
+          Confirm your identity using your device's hardware biometrics via the W3C <b>WebAuthn / Passkeys API</b> (supports <b>Apple Face ID &amp; Touch ID</b>, <b>Samsung Pass / Android BiometricPrompt</b>, <b>Google Passkeys</b>, and <b>Windows Hello</b>):
+        </p>
+        <button id="btn-biometric-register" class="biometric-btn">
+          [#] Register Device Biometrics (Face ID / Fingerprint Passkey)
+        </button>
+        <button id="btn-biometric-login" class="btn-gold" style="margin-top:10px;">
+          [*] Confirm Identity &amp; Sign In with Biometrics
+        </button>
+      </div>
+      
+      <button id="close-auth-modal" style="margin-top:12px; font-size:0.8rem; color:rgba(242,249,255,0.75); cursor:pointer;">[X] Close</button>
+    </div>
+  </div>
+  
+  <!-- "The Riddle of Symbol" Master Cypher Manual Modal [ $ ] -->
+  <div id="riddle-modal-backdrop" class="modal-backdrop">
+    <div class="riddle-codex-panel os-resizable">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+        <div>
+          <h2 style="font-family:var(--font-serif-celestial); color:var(--color-gold-radiant); font-size:1.15rem;">[$] The Riddle of Symbol — Universal Special-Character Cypher</h2>
+          <p style="font-size:0.74rem; color:var(--color-lapis-light);">100% Future-Proof Universal Computer Characters • Metaphor: "$ is similar in appearance to the Rod of Asclepius"</p>
+        </div>
+        <button id="close-riddle-modal" class="btn-primary" style="padding:6px 14px; font-size:0.75rem;">[X] Close</button>
+      </div>
+      
+      <div class="riddle-search-bar">
+        <input type="text" id="riddle-search-input" class="input-field" placeholder="Search special characters ($, §, ⊕, ¤, &amp;, [+], |&gt;, ^, #, ::, ~, %, &lt;&gt;, *) or metaphors..." style="margin-bottom:0;">
+      </div>
+      
+      <div id="riddle-codex-grid" class="riddle-grid"></div>
+    </div>
+  </div>
+  
+  <!-- In-App YouTube Video Player & Toggled Community Posts Modal [ |> ] -->
+  <div id="youtube-modal-backdrop" class="modal-backdrop">
+    <div class="yt-hub-panel os-resizable">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-family:var(--font-serif-celestial); color:var(--color-gold-radiant);">[|&gt;] CYPHER-06: Lumiere In-App Media &amp; Community Archive</h3>
+          <p style="font-size:0.72rem; color:var(--color-lapis-light);">Direct on-site playback • Permanent community post vault</p>
+        </div>
+        <button id="close-youtube-modal" class="btn-primary" style="padding:6px 14px; font-size:0.75rem;">[X] Close</button>
+      </div>
+      
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+        <div class="auth-tabs" style="margin-bottom:0; flex:1; min-width:220px;">
+          <button id="yt-tab-videos" class="auth-tab-btn active">[|&gt;] Latest Videos</button>
+          <button id="yt-tab-posts" class="auth-tab-btn">[§] Community Posts</button>
+        </div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap;">
+          <input type="text" id="yt-channel-id-input" class="input-field" value="@TheChrist" placeholder="@TheChrist" style="margin-bottom:0; width:115px; padding:6px 10px; font-size:0.74rem;">
+          <input type="password" id="yt-api-key-input" class="input-field" placeholder="YouTube API Key" style="margin-bottom:0; width:115px; padding:6px 10px; font-size:0.74rem;">
+          <button id="btn-yt-sync-api" class="btn-primary" style="padding:6px 12px; font-size:0.74rem;">Sync</button>
+        </div>
+      </div>
+      
+      <div id="yt-videos-view" style="display:flex; flex-direction:column; gap:12px;">
+        <div class="yt-player-frame-wrap">
+          <iframe id="yt-inline-iframe" class="yt-player-iframe" src="https://www.youtube-nocookie.com/embed/M7lc1UVf-VE?playsinline=1&rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="yt-video-grid" class="yt-video-grid"></div>
+      </div>
+      
+      <div id="yt-posts-view" style="display:none; flex-direction:column; gap:10px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.76rem; color:var(--color-gold-radiant);">[#] Stored permanently in server archive:</span>
+          <button id="btn-yt-archive-post" class="btn-gold" style="width:auto; padding:6px 16px; font-size:0.75rem;">[+] Archive Post</button>
+        </div>
+        <div id="yt-community-list" class="yt-community-list"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Gemini AI Self-Improvement & Community Voting Governance Modal [ ^ ] -->
+  <div id="gov-modal-backdrop" class="modal-backdrop">
+    <div class="gov-panel os-resizable">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-family:var(--font-serif-celestial); color:var(--color-gold-radiant);">[^] CYPHER-07: Oracle Senate — Gemini AI Upgrade &amp; Vote</h3>
+          <p style="font-size:0.74rem; color:var(--color-lapis-light);">Propose improvements, vote as a community, and deploy approved upgrades</p>
+        </div>
+        <button id="close-gov-modal" class="btn-primary" style="padding:6px 14px; font-size:0.75rem;">[X] Close</button>
+      </div>
+      
+      <div style="display:flex; gap:8px;">
+        <input type="text" id="gov-proposal-input" class="input-field" placeholder="Propose an upgrade for Gemini to build..." style="margin-bottom:0;">
+        <button id="btn-submit-proposal" class="btn-gold" style="width:auto; white-space:nowrap; padding:10px 18px;">[+] Propose</button>
+      </div>
+      
+      <div id="gov-proposal-list" class="gov-proposal-list"></div>
+    </div>
+  </div>
+  
+  <!-- Location Groups Modal [ & ] -->
+  <div id="group-modal-backdrop" class="modal-backdrop">
+    <div class="auth-card" style="max-width:420px;">
+      <h3 style="font-family:var(--font-serif-celestial); color:#fff; margin-bottom:8px;">[&amp;] CYPHER-04: Covenant Location Groups</h3>
+      <div id="group-chip-list" class="group-chip-list" style="margin-bottom:16px; max-height:160px; overflow-y:auto;"></div>
+      <div class="group-input-row">
+        <input type="text" id="group-code-input" class="input-field" placeholder="Group Code (e.g. HALO7)" style="margin-bottom:0;">
+        <button id="btn-join-group-code" class="btn-primary" style="white-space:nowrap;">Join</button>
+      </div>
+      <button id="close-group-modal" style="margin-top:16px; font-size:0.8rem; color:rgba(242,249,255,0.75); cursor:pointer;">[X] Done</button>
+    </div>
+  </div>
+  
+  
+  <!-- Official Credit Page Modal [ 7 ] — Version 7777777 {(/:-7777777-:\)} -->
+  <div id="credits-modal-backdrop" class="modal-backdrop">
+    <div class="credits-modal-card os-resizable">
+      <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+        <span class="credits-seal-banner">{(/:-7-:\)} • VERSION 7777777 • ETERNAL SEAL</span>
+        <button id="close-credits-modal" onclick="window.TII_App.CreditsPage.closeModal()" class="btn-primary" style="padding:5px 12px; font-size:0.74rem;">[X] Close</button>
+      </div>
+      
+      <img src="assets/logo.jpg" alt="Divine Beyond Design Crest" style="width:76px; height:76px; border-radius:50%; border:2px solid var(--color-gold-radiant); box-shadow:var(--goodly-glow-gold);">
+      
+      <div style="font-size:0.72rem; font-family:var(--font-mono); color:var(--color-gold-radiant); letter-spacing:0.15em; text-transform:uppercase;">
+        OFFICIAL SANCTUARY CREDITS &amp; SOVEREIGN ARCHITECT
+      </div>
+      
+      <h2 class="credits-archangel-name">Michael Elohim Archangel</h2>
+      
+      <div class="credits-links-stack">
+        <a href="https://www.youtube.com/@TheChrist" target="_blank" rel="noopener noreferrer" class="credits-link-row">
+          <div style="text-align:left;">
+            <div style="font-size:0.68rem; color:var(--color-gold-radiant); font-family:var(--font-mono); font-weight:700;">[|&gt;] OFFICIAL YOUTUBE SANCTUARY</div>
+            <div style="font-size:1.02rem; font-weight:800; color:#ffffff;">YouTube.com/@TheChrist</div>
+          </div>
+          <span style="font-family:var(--font-mono); font-size:0.78rem; color:var(--color-gold-radiant);">[Open &gt;&gt;]</span>
+        </a>
+        
+        <a href="https://twitter.com/TheChristus" target="_blank" rel="noopener noreferrer" class="credits-link-row">
+          <div style="text-align:left;">
+            <div style="font-size:0.68rem; color:var(--color-gold-radiant); font-family:var(--font-mono); font-weight:700;">[*] OFFICIAL TWITTER / X HERALD</div>
+            <div style="font-size:1.02rem; font-weight:800; color:#ffffff;">Twitter: @TheChristus</div>
+          </div>
+          <span style="font-family:var(--font-mono); font-size:0.78rem; color:var(--color-gold-radiant);">[Open &gt;&gt;]</span>
+        </a>
+      </div>
+      
+      <div class="credits-gemini-badge">
+        Completed With Gemini By Google
+      </div>
+      
+      <p style="font-size:0.76rem; color:var(--color-cloud-soft); line-height:1.48; margin:0;">
+        <b>TheInternetIsLove.com</b> (*"Divine Beyond Design"*) — Sealed forever at <b>Version 7777777 {(/:-7777777-:\)}</b>. Engineered with 1-to-1 16:9 universal widescreen architecture, AES-256-GCM encryption, Daniel 12 &amp; Revelation 12 intrinsic SVG machine code, and the Gemini 24-Hour Hazard Radar.
+      </p>
+      
+      <div style="display:flex; gap:10px; width:100%; flex-wrap:wrap; justify-content:center;">
+        <button id="btn-credits-watch-inapp" class="btn-primary" style="flex:1; min-width:170px; padding:9px 14px; font-size:0.76rem;">[|&gt;] Watch @TheChrist In-App</button>
+        <button id="btn-credits-open-btc" class="btn-gold" style="flex:1; min-width:170px; padding:9px 14px; font-size:0.76rem;">[B] Donate Bitcoin (BTC)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gemini 24-Hour Local & Global Hazard Radar Modal [ ! ] -->
+  <div id="hazard-modal-backdrop" class="modal-backdrop">
+    <div class="hazard-panel os-resizable">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+        <div>
+          <h3 style="font-family:var(--font-serif-celestial); color:var(--color-gold-radiant); font-size:1.12rem;">[!] CYPHER-14: Gemini 24-Hour Local &amp; Global Hazard Radar</h3>
+          <p id="hazard-window-status" style="font-size:0.72rem; color:var(--color-lapis-light);">[*] Scanning Google Search API (dateRestrict=d1) &amp; Google News API (when:24h) — Strictly Last 24 Hours Only</p>
+        </div>
+        <button id="close-hazard-modal" onclick="window.TII_App.HazardRadar.closeModal()" class="btn-primary" style="padding:6px 14px; font-size:0.75rem;">[X] Close</button>
+      </div>
+      
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <button id="btn-scan-local-hazards" class="btn-gold" style="width:auto; padding:8px 16px; font-size:0.76rem;">[!] Scan My Local Area (Last 24h)</button>
+        <button id="btn-scan-global-hazards" class="btn-primary" style="padding:8px 16px; font-size:0.76rem;">[⊕] Refresh Global 24h Feed</button>
+        <span style="font-size:0.7rem; color:var(--color-gold-radiant); font-family:var(--font-mono);">Auto-Purge: &gt;24h00m Excluded</span>
+      </div>
+      
+      <div style="display:flex; gap:6px; flex-wrap:wrap; background:rgba(4,11,22,0.8); padding:8px 10px; border-radius:10px; border:1px solid var(--color-border-glass);">
+        <input type="password" id="hazard-gemini-key" class="input-field" placeholder="Gemini API Key (Optional)" style="margin-bottom:0; flex:1; min-width:130px; padding:6px 10px; font-size:0.72rem;">
+        <input type="password" id="hazard-gsearch-key" class="input-field" placeholder="Google Search API Key (dateRestrict=d1)" style="margin-bottom:0; flex:1; min-width:140px; padding:6px 10px; font-size:0.72rem;">
+        <input type="text" id="hazard-gsearch-cx" class="input-field" placeholder="Search Engine CX" style="margin-bottom:0; width:125px; padding:6px 10px; font-size:0.72rem;">
+        <button id="btn-save-hazard-keys" class="btn-primary" style="padding:6px 12px; font-size:0.72rem;">Save Keys</button>
+      </div>
+      
+      <div id="hazard-list-container" class="hazard-list-container"></div>
+    </div>
+  </div>
+
+  
+  <!-- Checkable Live Souls Roster & Multi-Domain Presence Directory Modal [ ● ] -->
+  <div id="souls-modal-backdrop" class="modal-backdrop">
+    <div class="hazard-panel os-resizable" style="max-width:740px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+        <div>
+          <h3 style="font-family:var(--font-serif-celestial); color:var(--color-gold-radiant); font-size:1.14rem;">[●] Live Souls Online Roster &amp; Multi-Domain Counter</h3>
+          <p style="font-size:0.72rem; color:var(--color-lapis-light);">Real-Time Presence Across Active Board, Global Website, Local City Rooms &amp; Private Groups • Soul #1 Genesis Ledger</p>
+        </div>
+        <button id="close-souls-modal" onclick="window.TII_App.SoulsCounter.closeRosterModal()" class="btn-primary" style="padding:6px 14px; font-size:0.75rem;">[X] Close</button>
+      </div>
+      
+      <!-- 4 Live Domain Counter Scorecards -->
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; width:100%;">
+        <div style="background:rgba(255,224,51,0.12); border:1.5px solid var(--color-gold-radiant); border-radius:12px; padding:10px; text-align:center;">
+          <div id="sc-val-board" style="font-family:var(--font-mono); font-size:1.35rem; font-weight:900; color:var(--color-gold-radiant);">1</div>
+          <div id="sc-lbl-board" style="font-size:0.66rem; color:#ffffff; font-weight:700; text-transform:uppercase;">Active Board</div>
+        </div>
+        <div style="background:rgba(12,34,66,0.9); border:1px solid var(--color-border-glass); border-radius:12px; padding:10px; text-align:center;">
+          <div id="sc-val-global" style="font-family:var(--font-mono); font-size:1.35rem; font-weight:900; color:#6ee7b7;">1</div>
+          <div style="font-size:0.66rem; color:var(--color-lapis-light); font-weight:700; text-transform:uppercase;">Global Online</div>
+        </div>
+        <div style="background:rgba(12,34,66,0.9); border:1px solid var(--color-border-glass); border-radius:12px; padding:10px; text-align:center;">
+          <div id="sc-val-local" style="font-family:var(--font-mono); font-size:1.35rem; font-weight:900; color:#7dd3fc;">0</div>
+          <div style="font-size:0.66rem; color:var(--color-lapis-light); font-weight:700; text-transform:uppercase;">Local Cities</div>
+        </div>
+        <div style="background:rgba(12,34,66,0.9); border:1px solid var(--color-border-glass); border-radius:12px; padding:10px; text-align:center;">
+          <div id="sc-val-groups" style="font-family:var(--font-mono); font-size:1.35rem; font-weight:900; color:#c4b5fd;">0</div>
+          <div style="font-size:0.66rem; color:var(--color-lapis-light); font-weight:700; text-transform:uppercase;">Private Groups</div>
+        </div>
+      </div>
+      
+      <!-- 4 Roster Filter Tabs -->
+      <div class="auth-tabs" style="margin-bottom:0;">
+        <button id="souls-tab-board" class="auth-tab-btn active">[Current Board]</button>
+        <button id="souls-tab-global" class="auth-tab-btn">[All Global Online]</button>
+        <button id="souls-tab-groups" class="auth-tab-btn">[Cities &amp; Private Groups]</button>
+        <button id="souls-tab-ledger" class="auth-tab-btn">[Sign-Up Ledger (Soul #1+)]</button>
+      </div>
+      
+      <div id="souls-roster-list" class="hazard-list-container" style="max-height:42vh;"></div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+  
+  <!-- 32 Modular JavaScript Micro-Modules -->
+  <script src="js/config.js"></script>
+  <script src="js/world-cartography.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/event-bus.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/crypto-vault.js"></script>
+  <script src="js/translator.js"></script>
+  <script src="js/viewport-manager.js"></script>
+  <script src="js/google-maps-bridge.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/os-resizer.js"></script>
+  <script src="js/date-directory.js"></script>
+  <script src="js/history-router.js"></script>
+  <script src="js/cloud-toggle.js"></script>
+  <script src="js/souls-counter.js"></script>
+  <script src="js/live-bus.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/keystroke-streamer.js"></script>
+  <script src="js/typing-display.js"></script>
+  <script src="js/chat-controller.js"></script>
+  <script src="js/city-manager.js"></script>
+  <script src="js/private-chat.js"></script>
+  <script src="js/radar-map.js"></script>
+  <script src="js/location-blaster.js"></script>
+  <script src="js/location-groups.js"></script>
+  <script src="js/youtube-hub.js"></script>
+  <script src="js/gemini-governance.js"></script>
+  <script src="js/symbol-codex.js"></script>
+  <script src="js/save-state.js"></script>
+  <script src="js/btc-donate.js"></script>
+  <script src="js/credits-page.js"></script>
+  <script src="js/hazard-radar.js"></script>
+  <script src="js/api-diagnostics.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
