@@ -1,0 +1,69 @@
+/* ==========================================================================
+   UI Components (Buttons, Modals, Toasts, Badges)
+   ========================================================================== */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-lapis-sky) 0%, var(--color-lapis-primary) 100%);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: var(--goodly-glow-soft);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--goodly-glow-gold);
+  border-color: var(--color-gold-radiant);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--color-gold-halo) 0%, var(--color-gold-radiant) 100%);
+  color: #071324;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-family: var(--font-serif-celestial);
+  box-shadow: var(--goodly-glow-gold);
+  width: 100%;
+  text-shadow: none;
+}
+
+.input-field {
+  width: 100%;
+  background: rgba(6, 17, 33, 0.9);
+  border: 1px solid var(--color-border-glass);
+  padding: 11px 16px;
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.input-field:focus {
+  border-color: var(--color-gold-radiant);
+  box-shadow: var(--goodly-glow-gold);
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.toast {
+  background: rgba(10, 28, 54, 0.98);
+  border: 1.5px solid var(--color-gold-radiant);
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--goodly-glow-gold);
+  color: #ffffff;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+}

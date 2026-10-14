@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Version 5: Lapis Lazuli & Golden Halo Tokens
+   Universal Special-Character Cypher & Dual Native GUIs (Desktop + iPhone 16 Pro)
+   ========================================================================== */
+:root {
+  --color-lapis-darkest: #061121;
+  --color-lapis-dark: #0a1c36;
+  --color-lapis-deep: #113460;
+  --color-lapis-primary: #1b5694;
+  --color-lapis-sky: #2b88df;
+  --color-lapis-azure: #58b4ec;
+  --color-lapis-light: #a3e7f7;
+  --color-cloud-soft: #f2f9ff;
+  --color-cloud-white: #ffffff;
+  
+  --color-gold-radiant: #ffe033;
+  --color-gold-halo: #f7c93e;
+  --color-gold-deep: #cf9915;
+  --color-gold-glow: rgba(255, 220, 60, 0.65);
+  --color-azure-glow: rgba(88, 180, 236, 0.58);
+  --color-cloud-glow: rgba(255, 255, 255, 0.75);
+  
+  --color-accent-emerald: #10b981;
+  --color-accent-crimson: #ef4444;
+  --color-accent-purple: #a78bfa;
+  
+  --color-bg-app: #061121;
+  --color-bg-card: rgba(10, 28, 54, 0.95);
+  --color-bg-glass: rgba(17, 52, 96, 0.92);
+  --color-border-glass: rgba(163, 231, 247, 0.45);
+  --color-border-gold: rgba(255, 224, 51, 0.72);
+  
+  --font-serif-celestial: "Cinzel", Georgia, "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", Menlo, Consolas, Monaco, monospace;
+  
+  /* Radiant Goodly Glow Tokens (Zero Blur) */
+  --goodly-glow-soft: 0 0 16px rgba(88, 180, 236, 0.48), 0 0 32px rgba(255, 215, 0, 0.24);
+  --goodly-glow-gold: 0 0 20px rgba(255, 224, 51, 0.72), 0 0 40px rgba(247, 201, 62, 0.38);
+  --goodly-glow-cloud: 0 8px 28px rgba(43, 136, 223, 0.48), 0 0 24px rgba(255, 255, 255, 0.72), inset 0 0 16px rgba(255, 255, 255, 0.6);
+  --goodly-text-glow: 0 0 8px rgba(255, 255, 255, 0.45);
+  --goodly-gold-text-glow: 0 0 12px rgba(255, 224, 51, 0.8);
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.16s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-normal: 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}

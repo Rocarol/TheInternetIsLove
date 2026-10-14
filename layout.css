@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Core Layout Shell — Version 7 ("{(/:-7-:\)} Eternal Completion")
+   Universal 16:9 1-to-1 Default Layout Across Every Device (Desktop & Phone)
+   On phones/narrow viewports, horizontal + vertical scrolling is enabled so
+   the exact 1-to-1 16:9 Presidential Command Deck is preserved without distortion!
+   ========================================================================== */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #040d1a;
+   -webkit-overflow-scrolling: touch;
+}
+
+/* Default 16:9 1-to-1 Mode (body.gui-desktop) */
+body.gui-desktop {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  background: #040d1a;
+}
+
+/* On desktop monitors >= 1440px wide, fill the 16:9 widescreen viewport */
+body.gui-desktop .app-container {
+  display: flex;
+  flex-direction: column;
+  width: max(100vw, 1440px);
+  min-width: 1440px;
+  height: max(100vh, 810px);
+  min-height: 810px;
+  aspect-ratio: 16 / 9;
+  background: radial-gradient(circle at 50% 15%, #194b8a 0%, #061121 80%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* On phones and tablets (< 1440px wide) in default 16:9 mode:
+   Lock exact 1600x900 (16:9) 1-to-1 dimensions so the user scrolls left & right
+   to experience the exact same 1-to-1 Presidential Command Deck as Desktop! */
+@media (max-width: 1439px) {
+  html:has(body.gui-desktop),
+  body.gui-desktop {
+    overflow-x: auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+  }
+  body.gui-desktop .app-container {
+    width: 1600px !important;
+    min-width: 1600px !important;
+    height: 900px !important;
+    min-height: 900px !important;
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+  }
+}
+
+.app-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-sidebar {
+  width: 265px;
+  min-width: 220px;
+  max-width: 75vw;
+  background: var(--color-bg-card);
+  border-right: 1.5px solid var(--color-border-glass);
+  box-shadow: var(--goodly-glow-soft);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+  z-index: 35;
+  position: relative;
+  flex-shrink: 0;
+}
+
+body.map-full-view .app-sidebar {
+  transform: translateX(-100%);
+  opacity: 0;
+  width: 0 !important;
+  min-width: 0 !important;
+  border: none;
+  pointer-events: none;
+}
+
+.app-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
